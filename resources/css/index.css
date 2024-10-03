@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: whitesmoke;
+    background-color: black;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: appear 1s;
+}
+
+                        /* HEAD CUSTOMS */
+
+header {
+    text-align: center;
+}
+
+header img {
+    height: 600px;
+    margin-top: 100px;
+
+}
+
+.banner {
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    box-sizing: content-box;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    font-weight: 12.5 rem;
+    height: auto;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    padding-top: 3.125rem;
+    row-gap: 1rem;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.banner h1 {
+    letter-spacing: 10px;
+    animation: moveRight 3s;
+}
+
+.banner h1 sup {
+    font-size: small;
+}
+
+.banner img {
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.banner .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: 2 / 2 / span 3 / span 2;
+}
+
+.banner .title span {
+    color: #FF1D58;
+    width: auto;
+    font-size: 1rem;
+    animation: moveLeft 3s;
+    margin-top: 2.75rem;
+}
+
+.banner .login {
+    grid-area: 5 / 2 / span 1 / span 2;
+}
+
+.banner .login form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+#endBannerLine {
+    grid-area: 3 / 2 / span 2 / span 2;
+    box-shadow: inset 1rem 0 1rem #494D5F, inset -1rem 0 1rem #494D5F, 0 0 0.5rem #494D5F;
+    animation: appear 5s;
+}
+
+.flex {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: first baseline;
+}
+
+.flex #creator {
+    border: 1px solid white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 25px;
+    margin: 25px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 20px;
+    font-size: small;
+    letter-spacing: 2px;
+    line-height: 1.5rem;
+    text-align: center;
+    float: bottom;
+    height: 6rem;
+    width: 12rem;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6ff2ccfb-d302-4348-87bc-8b9568748e63/de9mgon-3e4d828f-0e67-44d3-923d-33f4fbd32954.jpg/v1/fill/w_1058,h_755,q_70,strp/the_ocean_is_on_fire_by_jjcanvas_de9mgon-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTM3MSIsInBhdGgiOiJcL2ZcLzZmZjJjY2ZiLWQzMDItNDM0OC04N2JjLThiOTU2ODc0OGU2M1wvZGU5bWdvbi0zZTRkODI4Zi0wZTY3LTQ0ZDMtOTIzZC0zM2Y0ZmJkMzI5NTQuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.AwpIWLohFqpwHglyqos4WRFXOnU3I6qHUiLKUmRtCss);
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: 2 / 4 / span 1 / span 1;
+}
+
+#menuButton {
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-small;
+    letter-spacing: 0;
+    position: relative;
+} 
+
+#menuButton:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color:darkgray;
+}
+
+
+#options {
+    display: none;
+    background: linear-gradient(.75turn, #4f5f76, black);
+    position: absolute;
+    width: 13rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem;
+    right: 1rem;
+    border: 0px solid none;
+    border-radius: 1.5rem;
+    animation: appear .25s ease-out;
+}
+
+#options a {
+    text-decoration: none;
+    color: rgb(103, 101, 209);
+    margin: 0 1rem;
+    line-height: 2rem;
+}
+
+#options a:hover {
+    cursor: pointer;
+    color: #494D5F;
+}
+
+#options h5 {
+    margin-top: 1rem;
+}
+
+#options #icon0 {
+    display: inline-flex;
+}
+
+#options img {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 auto;
+    position: relative;
+    left: 1rem;
+}
+
+#options nav hr {
+    margin-bottom: 1rem;
+}
+
+#options #close {
+    line-height: 4rem;
+    font-size: x-small;
+    font-style: italic;
+}
+
+#options #close:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#options .signUp {
+    color: rgb(170, 164, 194);
+}
+
+#options .signUp span {
+    color: rgb(34, 5, 92);
+}
+
+#presentation {
+    width: 100%;
+    height: auto;
+    margin: 6.5rem auto 0 auto;
+    padding: 8rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.05rem;
+    border: 1px solid none;
+    background: linear-gradient(.25turn, black, black, black, rgba(70, 125, 212, 0.7));
+    animation: borderOpacity 
+     /*#acb7ae */; 
+}
+
+#separator {
+    width: 50px;
+    transition: width 0.4s;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes moveRight { 
+    0% {
+        position: relative;
+        left: -20rem;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        position: relative;
+        right: -20rem;
+        opacity: 0;
+    }
+    100% {
+        position: relative;
+        right: 0;
+        opacity: 1;
+    }
+    
+
+}
+
+@keyframes stretchLine {
+    from {
+        width: 400px;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+                        /* MAIN CONTENT */
+
+main {
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(13, 1fr);
+    margin: 0 8rem;
+    text-align: center;
+}
+
+main section {
+    padding: 5rem;
+    position: sticky;
+    overflow: scroll;
+    top: 0;
+    height: 30.5rem;
+    margin-top: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: box-shadow .45s;
+}
+
+#perciving {
+    grid-area: 1 / 10 / span 2 / span 4;
+    display: flex;
+    justify-content: center;
+}
+
+#perciving:hover, #decision:hover, #reason:hover, #act:hover {
+    box-shadow: inset -2rem 2rem 0.5rem #494D5F, inset -0.2rem 0.2rem 0.5rem #494D5F, inset 0.2rem -0.2rem 0.5rem #494D5F, inset -0.2rem -0.2rem 0.5rem #494D5F, -2rem 2rem 0rem #494D5F, 0rem 0 0 #494D5F, 0rem 0rem 0 #494D5F;
+}
+
+#reason {
+    grid-area: 2 / 6 / span 2 / span 4;
+}
+/* #reason:hover, #act:hover {
+    box-shadow: inset 2rem 2rem 0.5rem #494D5F, inset -0.2rem 0.2rem 0.5rem #494D5F, inset 0.2rem -0.2rem 0.5rem #494D5F, inset -0.2rem -0.2rem 0.5rem #494D5F, 2rem 2rem 0rem #494D5F, 0rem 0 0 #494D5F, 0rem 0rem 0 #494D5F;
+
+} */
+
+#decision {
+    grid-area: 3 / 2 / span 2 / span 4;
+}
+
+#act {
+    grid-area: 4 / 1 / span 2 / 2;
+}
+
+.logo {
+    display: none;
+    width: 10rem;
+    height: 10rem;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+
+                            /* FOOTER CONTENT */
+
+footer div {
+    border: 1px solid white;
+    padding: 25px;
+    margin: 25px;
+    display: block;
+    font-family:'Raleway', sans-serif;
+    font-weight: 20px;
+    font-size: small;
+    letter-spacing: 2px;
+    text-align: center;
+    clear: both;
+   
+}
+
+#status {
+    position: fixed;
+    top: 140px;
+    left: 0;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    width: 60px;
+}
+
+#status input[type] {
+    border-radius: 100px;
+    height: 30px;
+    width: 7px;
+}
+
+#ending {
+    border-left: none;
+    border-right: none;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    line-height: 2rem;
+    margin-top: 3rem;
+    background: linear-gradient(.75turn, #000000, #423c98,#000);
+    
+}
+
+#ending .usedTech {
+    margin: 1rem;
+}
+
+#ending .lvl div {
+    margin: 1rem;
+    padding: 0rem;
+    width: 5rem;
+    display: grid;
+    grid-template: 1fr / repeat(5, 1fr);
+}
+
+#html .cursor{
+    background-color: #fff;
+    padding: 0.5rem 0.3rem;
+    margin: 0;
+    grid-area: 1 / 5 / span 1 / span 1;
+}
+
+#css .cursor{
+    background-color: #fff;
+    padding: 0.5rem 0.3rem;
+    grid-area: 1 / 5 / span 1 / span 1;
+}
+
+#js .cursor{
+    background-color: #fff;
+    padding: 0.5rem 0.3rem;
+    grid-area: 1 / 4 / span 1 / span 1;
+}
+
+#git .cursor{
+    background-color: #fff;
+    padding: 0.5rem 0.3rem;
+    grid-area: 1 / 3 / span 1 / span 1;
+}
+
+#react .cursor{
+    background-color: #fff;
+    padding: 0.5rem 0.3rem;
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+#contact p {
+    margin-bottom: 1rem;
+}
+
