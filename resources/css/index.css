@@ -134,6 +134,10 @@ header img {
     color:darkgray;
 }
 
+.ombre {
+    width: 5rem
+    length: 5rem
+}
 
 #options {
     display: none;
